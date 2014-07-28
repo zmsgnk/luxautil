@@ -29,7 +29,6 @@ fread.pup <- function(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -
                 verbose = verbose, autostart = autostart, skip = skip, select = select, 
                 drop = drop, colClasses = colClasses, integer64 = integer64, showProgress = showProgress)
   first <- colnames(data)[1]
-  Sys.setlocale('LC_ALL','C')
-  setnames(data, first, first %>% str_replace("\xefｻｿ" , "") %>% str_replace_all("\"", ""))
+  setnames(data, first, first %>% str_replace_all("[^\x01-\x7E]", ""))
   data
 }
