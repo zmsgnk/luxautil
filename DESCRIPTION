@@ -3,7 +3,11 @@ Type: Package
 Title: Luxa Util
 Version: 0.0.1
 Date: 2014-07-25
-Author: hoxo_m
-Maintainer: hoxo_m <hoxo.smile@gmail.com>
+Author: Koji MAKIYAMA
+Maintainer: Koji MAKIYAMA <koji.makiyama@luxa.co.jp>
 Description: R Utilities in Luxa
 License: GPL (>= 2)
+Imports:
+    data.table,
+    dplyr,
+    stringr

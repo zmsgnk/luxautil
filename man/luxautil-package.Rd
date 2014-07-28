@@ -6,6 +6,6 @@
 R Utilities in Luxa
 }
 \author{
-hoxo_m
+Koji MAKIYAMA
 }
 

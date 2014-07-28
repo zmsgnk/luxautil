@@ -48,6 +48,6 @@ A \code{data.table}.
 data.table::fread() for exported files from PupSQLite
 }
 \author{
-hoxo_m
+Koji MAKIYAMA
 }
 

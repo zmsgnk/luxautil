@@ -2,4 +2,5 @@
 
 export(fread.pup)
 import(data.table)
+import(dplyr)
 import(stringr)

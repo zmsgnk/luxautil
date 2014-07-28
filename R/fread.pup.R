@@ -16,7 +16,7 @@
 #' @param integer64 "integer64" (default) reads columns detected as containing integers larger than 2^31 as type bit64::integer64. Alternatively, "double"|"numeric" reads as base::read.csv does; i.e., possibly with loss of precision and if so silently. Or, "character".
 #' @param showProgress TRUE displays progress on the console using \r. It is produced in fread's C code where the very nice (but R level) txtProgressBar and tkProgressBar are not easily available.
 #' @return A \code{data.table}.
-#' @author hoxo_m
+#' @author Koji MAKIYAMA
 #' 
 #' @export
 fread.pup <- function(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -1L, 
