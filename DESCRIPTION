@@ -11,3 +11,5 @@ Imports:
     data.table,
     dplyr,
     stringr
+Suggests:
+    testthat

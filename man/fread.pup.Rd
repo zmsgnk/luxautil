@@ -11,11 +11,11 @@ fread.pup(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -1L,
   showProgress = getOption("datatable.showProgress"))
 }
 \arguments{
-\item{input}{Either the file name to read (containing no \n character), a shell command that preprocesses the file (e.g. fread("grep blah filename")) or the input itself as a string (containing at least one \n), see examples. In both cases, a length 1 character string. A filename input is passed through path.expand for convenience and may be a URL starting http:// or file://.}
+\item{input}{Either the file name to read (containing no \\n character), a shell command that preprocesses the file (e.g. fread("grep blah filename")) or the input itself as a string (containing at least one \\n), see examples. In both cases, a length 1 character string. A filename input is passed through path.expand for convenience and may be a URL starting http:// or file://.}
 
-\item{sep}{The separator between columns. Defaults to the first character in the set [,\t |;:] that exists on line autostart outside quoted ("") regions, and separates the rows above autostart into a consistent number of fields, too.}
+\item{sep}{The separator between columns. Defaults to the first character in the set [,\\t |;:] that exists on line autostart outside quoted ("") regions, and separates the rows above autostart into a consistent number of fields, too.}
 
-\item{sep2}{The separator within columns. A list column will be returned where each cell is a vector of values. This is much faster using less working memory than strsplit afterwards or similar techniques. For each column sep2 can be different and is the first character in the same set above [,\t |;:], other than sep, that exists inside each field outside quoted regions on line autostart. NB: sep2 is not yet implemented.}
+\item{sep2}{The separator within columns. A list column will be returned where each cell is a vector of values. This is much faster using less working memory than strsplit afterwards or similar techniques. For each column sep2 can be different and is the first character in the same set above [,\\t |;:], other than sep, that exists inside each field outside quoted regions on line autostart. NB: sep2 is not yet implemented.}
 
 \item{nrows}{The number of rows to read, by default -1 means all. Unlike read.table, it doesn't help speed to set this to the number of rows in the file (or an estimate), since the number of rows is automatically determined and is already fast. Only set nrows if you require the first 10 rows, for example. 'nrows=0' is a special case that just returns the column names and types; e.g., a dry run for a large file or to quickly check format consistency of a set of files before starting to read any.}
 
@@ -39,7 +39,7 @@ fread.pup(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -1L,
 
 \item{integer64}{"integer64" (default) reads columns detected as containing integers larger than 2^31 as type bit64::integer64. Alternatively, "double"|"numeric" reads as base::read.csv does; i.e., possibly with loss of precision and if so silently. Or, "character".}
 
-\item{showProgress}{TRUE displays progress on the console using \r. It is produced in fread's C code where the very nice (but R level) txtProgressBar and tkProgressBar are not easily available.}
+\item{showProgress}{TRUE displays progress on the console using \\r. It is produced in fread's C code where the very nice (but R level) txtProgressBar and tkProgressBar are not easily available.}
 }
 \value{
 A \code{data.table}.
