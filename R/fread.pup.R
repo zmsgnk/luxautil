@@ -19,7 +19,7 @@
 #' @author hoxo_m
 #' 
 #' @export
-FreadPup <- function(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -1L, 
+fread.pup <- function(input = "test.csv", sep = "auto", sep2 = "auto", nrows = -1L, 
                       header = "auto", na.strings = "NA", stringsAsFactors = FALSE, 
                       verbose = FALSE, autostart = 30L, skip = -1L, select = NULL, 
                       drop = NULL, colClasses = NULL, integer64 = getOption("datatable.integer64"), 
