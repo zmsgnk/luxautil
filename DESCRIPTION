@@ -7,3 +7,4 @@ Author: hoxo_m
 Maintainer: hoxo_m <hoxo.smile@gmail.com>
 Description: R Utilities in Luxa
 License: GPL (>= 2)
+Imports: data.table, dplyr, stringr
