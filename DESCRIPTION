@@ -10,6 +10,8 @@ License: GPL (>= 2)
 Imports:
     data.table,
     dplyr,
-    stringr
+    stringr,
+    rga,
+    foreach
 Suggests:
     testthat

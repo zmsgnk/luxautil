@@ -3,7 +3,7 @@
 ##' R Utilities in Luxa
 ##' 
 ##' @name luxautil-package
-##' @import data.table dplyr stringr
+##' @import data.table dplyr stringr rga foreach
 ##' 
 ##' @author Koji MAKIYAMA
 ##' 
