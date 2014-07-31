@@ -11,6 +11,7 @@
 #' @param start Start point of the data (usually 1)
 #' @param max Max record of the data. 
 #' @param where Path to your ga instance.
+#' @param batch 
 #' @return A \code{data.frame}.
 #' @author zmsgnk
 #' 
@@ -18,7 +19,8 @@
 HandleGA <- function(start.date = format(Sys.Date() - 8, "%Y-%m-%d"),
 	                   end.date = format(Sys.Date() - 1, "%Y-%m-%d"),
 	                   domain, metrics = "ga:users,ga:sessions,ga:pageviews", 
-	                   dimensions = "ga:date", sort = "", filters = "", segment = "", start=1, max=10000, where="ga.rga") {
+	                   dimensions = "ga:date", sort = "", filters = "", segment = "", start=1, max=10000,
+                     where="ga.rga", batch=TRUE) {
 	rga.open(instance="ga", where=where)
   props <- ga$getProfiles()
 
@@ -26,7 +28,7 @@ HandleGA <- function(start.date = format(Sys.Date() - 8, "%Y-%m-%d"),
 		p <- props[props$name %in% domain, ]
 		profile.ids <- as.character(p$id)
 		foreach(id=profile.ids, .combine=rbind) %do% {
-			ga$getData(id, 
+			ga$getData(id, batch=batch,
 				         start.date = start.date,
 				         end.date = end.date,
 				         metrics = metrics,
